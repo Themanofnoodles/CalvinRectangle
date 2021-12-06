@@ -13,7 +13,8 @@ using namespace std::chrono; // nanoseconds, system_clock, seconds
 int main() {
 
     system("clear") ;
-  
+
+//Introduction sequence
   std::cout << "----------------------------------------------------------\n" ;
   sleep_for(nanoseconds(200000000)) ;
   std::cout << "|                                                        |\n" ;
@@ -39,39 +40,52 @@ int main() {
     std::cout << "|                                                        |\n" ;
   sleep_for(nanoseconds(200000000)) ;
     std::cout << "----------------------------------------------------------\n" <<endl ;
+  sleep_for(seconds(1));
+  
+//Hi Bob
   std::cout << "Say Hi To Bob\n\n" ;
+  sleep_for(seconds(1));
   std::cout << "     (Hi!)\n";
   std::cout << "     /\n";
   std::cout << "   []  /\n";
   std::cout << "  /||--\n";
   std::cout << "--------\n";
-  std:;cout << "|      |\n";
+  std::cout << "|      |\n";
 
-int length1 = 0 ;
-int width1 = 0 ;
-
+//Create the Variables
+double length1 = 0 ;
+double width1 = 0 ;
+string unit;
+  
   sleep_for(seconds(3)) ;
     system("clear") ;
-  
+
+
+//Ask for unit
+  std::cout << "Please Input Your Unit of Measurement\n";
+
+  std::cin >> unit;
+
+//Ask for length
   std::cout << "Please Input Your Rectangle Length\n" ;
   std::cin >> length1 ;
 
-    system("clear") ;
-
+//Ask for width
   std::cout << "Please Input Your Rectangle Width\n" ;
   std::cin >> width1 ;
 
-    system("clear") ;
+//Create and define area and perimeter
+double area1 = length1 * width1 ;
+double perimeter1 = (length1*2) + (width1*2) ;
 
-int length2 = length1 * 2 ;
-int width2 = width1 * 2 ;
-int area = length1 * width1 ;
-int perimeter = length2 + width2 ;
-
-  std::cout << "Your Rectangle's Area is: " ;
-  std::cout << area ;
-  std::cout << "\n" ;
-  std::cout << "Your Rectangle's Perimeter is: " ;
-  std::cout << perimeter ;
-    
+//Display Results
+  std::cout << "\nYour Rectangle's Area is: " ;
+  std::cout << area1 ;
+  std::cout << " Square ";
+  std::cout << unit;
+  sleep_for(seconds(1));
+  std::cout << "\nYour Rectangle's Perimeter is: " ;
+  std::cout << perimeter1 ;
+  std::cout << " ";
+  std::cout << unit;  
 } 
