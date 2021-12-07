@@ -12,6 +12,9 @@ using namespace std::chrono; // nanoseconds, system_clock, seconds
 
 int main() {
 
+int Decider = 1;
+int Go_Again = 1;
+  
     system("clear") ;
 
 //Introduction sequence
@@ -58,10 +61,10 @@ double width1 = 0 ;
 string unit;
   
   sleep_for(seconds(3)) ;
-    system("clear") ;
 
-
-//Ask for unit
+  while (Decider == Go_Again) {
+system("clear");
+    //Ask for unit
   std::cout << "Please Input Your Unit of Measurement\n";
 
   std::cin >> unit;
@@ -88,4 +91,9 @@ double perimeter1 = (length1*2) + (width1*2) ;
   std::cout << perimeter1 ;
   std::cout << " ";
   std::cout << unit;  
+    sleep_for(seconds(1));
+  std::cout << "\nWould you like to create a new Rectangle? 1 for yes, 2 for no.\n";
+  std::cin >> Go_Again;
+    }
+  std::cout << "Thank you for creating a rectangle!";
 } 
